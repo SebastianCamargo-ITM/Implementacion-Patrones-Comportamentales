@@ -13,7 +13,6 @@ public class DocumentHistory implements Iterable<Memento>{
 
     public void save(Document document) {
         history.add(document.saveToMemento());
-        // Clear the future when a new change is made
         future.clear();
     }
 
@@ -21,14 +20,14 @@ public class DocumentHistory implements Iterable<Memento>{
         if (!history.isEmpty()) {
             Memento memento = history.remove(history.size() - 1);
             future.add(memento); // Add the undone change to the future
-            document.restoreFromMemento(memento);
+            document.restoreFromMemento(history.get(history.size() - 1));
         }
     }
 
     public void redo(Document document) {
         if (!future.isEmpty()) {
             Memento memento = future.remove(future.size() - 1);
-            history.add(memento); // Add the redone change back to the history
+            history.add(memento);
             document.restoreFromMemento(memento);
         }
     }

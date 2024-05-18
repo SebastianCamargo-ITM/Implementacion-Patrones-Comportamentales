@@ -9,19 +9,18 @@ public class App {
         Document document = new Document();
         DocumentHistory history = new DocumentHistory();
         
-        document.change("Hello");
+        document.change("Hola");
         history.save(document);
-        document.change("Hello World");
+        document.change("Soy un documento");
         history.save(document);
-        document.change("Hello World!");
+        document.change("Me gusta el patrón Memento");
         history.save(document);
-        history.undo(document);
-        history.redo(document);
-        
+        history.undo(document);// Content: Soy un documento
+        history.redo(document);// Content: Me gusta el patrón Memento
 
         Iterator<Memento> iterator = history.iterator();
 
-        System.out.println("Document history:");
+        System.out.println("\nDocument history:");
         while (iterator.hasNext()) {
             Memento memento = iterator.next();
             System.out.println(memento.getSavedContent());
