@@ -1,18 +1,5 @@
-## Getting Started
+## AUTENTICACIÓN DE USUARIO (CHAIN OF RESPONSIBILITY) 
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Se selecciona el patrón Chain of Responsibility como la solución más adecuada ya que con el patrón Chain of Responsibility, podemos construir una cadena de verificación donde cada objeto tiene la responsabilidad de procesar una solicitud de autenticación o de pasársela al siguiente objeto en la cadena. Esto proporciona una forma modular y flexible de construir y gestionar el proceso de autenticación, facilitando la adición, eliminación o modificación de pasos de verificación de manera dinámica. 
 
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Además, este patrón facilita la implementación de diferentes estrategias de autenticación que pueden ser combinadas según sea necesario. Por ejemplo, un paso de verificación puede ser la validación de credenciales, seguido de un paso de verificación de token, y luego una autenticación biométrica, todo como una cadena organizada y modificable. 

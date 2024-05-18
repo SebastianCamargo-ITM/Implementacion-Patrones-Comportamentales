@@ -1,18 +1,7 @@
-## Getting Started
+## SISTEMA DE NAVEGACIÓN (STRATEGY) 
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Se selecciona el patrón Strategy como la solución más adecuada. Con el patrón Strategy, podemos definir una familia de algoritmos de cálculo de rutas, encapsular cada uno de ellos y hacerlos intercambiables. Esto permite que el sistema de navegación use la estrategia de cálculo de ruta más adecuada, según las preferencias del usuario. 
 
-## Folder Structure
+Además, este patrón facilita la extensión y el mantenimiento del sistema, ya que nuevas estrategias de cálculo de rutas pueden ser añadidas sin modificar el código existente. Por ejemplo, el usuario puede seleccionar la ruta más rápida durante horas pico para evitar congestiones, la ruta más corta cuando necesita llegar a un destino cercano rápidamente, o la ruta panorámica para disfrutar de un viaje más agradable y escénico. 
 
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+La flexibilidad del patrón Strategy también permitiría intercambiar automáticamente las estrategias para que el sistema responda a cambios en tiempo real, como el tráfico o condiciones climáticas, adaptando la ruta seleccionada de manera eficiente 

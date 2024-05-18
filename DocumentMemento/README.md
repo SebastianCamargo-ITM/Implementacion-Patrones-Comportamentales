@@ -1,18 +1,5 @@
-## Getting Started
+## CONTROL DE VERSIONES DE DOCUMENTOS (MEMENTO) 
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Se selecciona el patrón Memento como la solución más adecuada. Con el patrón Memento, podemos capturar y almacenar el estado interno de un documento sin exponer los detalles de su implementación. Cada memento representa una versión específica del documento, permitiendo así guardar múltiples estados a lo largo del tiempo. Esto proporciona una forma modular y flexible de gestionar el control de versiones, facilitando la restauración de estados anteriores del documento de manera dinámica. 
 
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Además, este patrón facilita la implementación de un historial de versiones que los usuarios pueden recorrer para ver los cambios realizados. El recorrido de los cambios se realiza mediante el uso del patrón Iterator, que permite iterar a través de los mementos almacenados de manera ordenada y eficiente. Por ejemplo, un usuario puede crear un memento del estado actual del documento antes de hacer cambios significativos, y luego, si es necesario, restaurar el documento a ese estado previo. De esta manera, se asegura la integridad y la capacidad de recuperación del documento en cualquier momento. 
