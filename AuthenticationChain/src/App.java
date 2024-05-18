@@ -18,9 +18,8 @@ public class App {
         AuthenticationService authService = new AuthenticationService(biometricHandler);
 
         //User object with username, password, two factor and biometric authentication
-        User user = new User("username", "password");
-        user.setBiometricAuth("finger print");
-        user.setTwoFactorAuth("123456");
+        User user = new User("admin", "admin");
+        user.setBiometricAuth("fingerprint");
 
         //Message will be printed based on the authentication status
         String message = authService.authenticate(user) ? " is authenticated": " is not authenticated";
